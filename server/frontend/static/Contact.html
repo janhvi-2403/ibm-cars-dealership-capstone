@@ -5,118 +5,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Cars Dealership</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Required stylesheet links -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #263238;
+            margin: 0;
+        }
+
+        .navbar {
+            background: #17365d;
+            padding: 16px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .navbar a.active {
+            color: #ffcc66;
+            font-weight: bold;
+            border-bottom: 2px solid #ffcc66;
+            padding-bottom: 5px;
+        }
+
+        .brand {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #e1eaf5;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        .hero h1 {
+            color: #17365d;
+            margin-bottom: 10px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 650px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        .contact-card h2 {
+            color: #17365d;
+            font-size: 20px;
+        }
+
+        .contact-card a {
+            color: #075bb5;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #17365d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 35px;
+        }
+    </style>
 </head>
+
 <body>
+    <nav class="navbar">
+        <a class="brand" href="/">Cars Dealership</a>
+        <div>
+            <a href="/">Home</a>
+            <a href="/About.html">About Us</a>
+            <a href="/Contact.html" class="active"
+               aria-current="page">Contact Us</a>
+        </div>
+    </nav>
 
-    <header class="site-header">
-        <nav class="navbar">
-            <a class="brand" href="/">Cars Dealership</a>
-
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/static/About.html">About Us</a>
-                <a class="active" href="/static/Contact.html">Contact Us</a>
-            </div>
-        </nav>
+    <header class="hero">
+        <h1>Contact Us</h1>
+        <p>We're here to help you find the right dealership and answer your questions.</p>
+        <img src="/static/cars.jpeg"
+             alt="Cars displayed at a dealership"
+             onerror="this.onerror=null;this.src='https://placehold.co/650x240/e1eaf5/17365d?text=Cars+Dealership';">
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">WE ARE HERE TO HELP</p>
-                <h1>Contact Us</h1>
-                <p>
-                    Have a question about a dealership or need help using
-                    our platform? Get in touch with our team.
+    <main class="container">
+        <h2>Get in Touch</h2>
+        <p>Contact our team for dealership information, website support, or general enquiries.</p>
+
+        <div class="contact-grid">
+            <section class="contact-card">
+                <img class="contact-image"
+                     src="/static/contactus.png"
+                     alt="Customer support team"
+                     onerror="this.onerror=null;this.src='https://placehold.co/400x160/e1eaf5/17365d?text=Customer+Support';">
+                <h2>Customer Support</h2>
+                <p>Our support team can assist with questions about dealerships and customer reviews.</p>
+                <p><strong>Email:</strong>
+                    <a href="mailto:support@carsdealership.example">
+                        support@carsdealership.example
+                    </a>
                 </p>
-            </div>
-        </section>
+                <p><strong>Phone:</strong> +1-800-555-0142</p>
+            </section>
 
-        <section class="about-section">
-            <h2>We'd Love to Hear From You</h2>
-            <p>
-                The Cars Dealership team welcomes your questions, feedback,
-                and suggestions. Contact us using the information below.
-                We will do our best to help you with your enquiry.
-            </p>
-        </section>
+            <section class="contact-card">
+                <h2>Head Office</h2>
+                <p><strong>Cars Dealership</strong></p>
+                <p>123 Automotive Drive</p>
+                <p>Chicago, IL 60601, USA</p>
+                <p><strong>Email:</strong>
+                    <a href="mailto:info@carsdealership.example">
+                        info@carsdealership.example
+                    </a>
+                </p>
+            </section>
 
-        <section class="team-section">
-            <div class="section-heading">
-                <p class="eyebrow">GET IN TOUCH</p>
-                <h2>Our Contact Information</h2>
-                <p>Choose the contact method that works best for you.</p>
-            </div>
-
-            <div class="values-grid">
-                <div>
-                    <img
-                        src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80"
-                        alt="Modern customer support office"
-                        style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
-                    <h3>Office</h3>
-                    <p>Cars Dealership Customer Support</p>
-                    <p>United States</p>
-                    <p>Office visits by appointment.</p>
-                </div>
-
-                <div>
-                    <img
-                        src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?auto=format&fit=crop&w=700&q=80"
-                        alt="Customer service representative using a headset"
-                        style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
-                    <h3>Email Support</h3>
-                    <p>For general enquiries and feedback:</p>
-                    <p>
-                        <a href="mailto:support@example.com">
-                            support@example.com
-                        </a>
-                    </p>
-                    <p>Replace this placeholder with your actual support email.</p>
-                </div>
-
-                <div>
-                    <img
-                        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
-                        alt="Laptop used for online customer support"
-                        style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:15px;">
-                    <h3>Online Assistance</h3>
-                    <p>Need help navigating our dealership listings or reviews?</p>
-                    <p>Use our website to explore dealerships and share feedback.</p>
-                    <p>
-                        <a href="/">Visit our homepage</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-section">
-            <h2>Customer Support</h2>
-            <p>
-                <strong>General enquiries:</strong>
-                <a href="mailto:support@example.com">support@example.com</a>
-            </p>
-            <p>
-                <strong>Technical assistance:</strong>
-                <a href="mailto:help@example.com">help@example.com</a>
-            </p>
-            <p>
-                <strong>Business hours:</strong>
-                Monday to Friday, 9:00 AM to 5:00 PM (U.S. Eastern Time).
-            </p>
-            <p>
-                Please note that the email addresses and business hours
-                above are sample details for this capstone project.
-                Replace them with verified contact information if available.
-            </p>
-        </section>
+            <section class="contact-card">
+                <h2>Business Enquiries</h2>
+                <p>For dealership partnerships and business-related enquiries, contact our team.</p>
+                <p><strong>Email:</strong>
+                    <a href="mailto:business@carsdealership.example">
+                        business@carsdealership.example
+                    </a>
+                </p>
+                <p><strong>Hours:</strong> Monday–Friday, 9 AM–5 PM</p>
+            </section>
+        </div>
     </main>
 
-    <footer class="site-footer">
+    <footer>
         <p>&copy; 2026 Cars Dealership. All rights reserved.</p>
-        <p>Thank you for connecting with us.</p>
     </footer>
-
 </body>
 </html>
