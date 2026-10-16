@@ -1,0 +1,6 @@
+Command:
+curl -i -X POST http://127.0.0.1:8000/djangoapp/login -H 'Content-Type: application/json' -d '{"userName":"testuser","password":"TestPass123"}'
+
+Output:
+curl: (7) Failed to connect to 127.0.0.1 port 8000 after 0 ms: Couldn't connect to server
+

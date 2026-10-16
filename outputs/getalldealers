@@ -1,0 +1,12 @@
+$ curl -i http://127.0.0.1:8000/djangoapp/get_dealers
+HTTP/1.1 200 OK
+Date: Fri, 16 Oct 2026 17:15:54 GMT
+Server: WSGIServer/0.2 CPython/3.14.2
+Content-Type: application/json
+X-Frame-Options: DENY
+Content-Length: 256
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+{"status": 200, "dealers": [{"id": 1, "full_name": "Sample Motors", "city": "Detroit", "state": "Michigan", "address": "100 Main Street"}, {"id": 2, "full_name": "Example Auto Center", "city": "Chicago", "state": "Illinois", "address": "200 Lake Street"}]}

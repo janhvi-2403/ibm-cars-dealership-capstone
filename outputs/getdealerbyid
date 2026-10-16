@@ -1,0 +1,12 @@
+]633;E;echo '$ curl -i http://127.0.0.1:8000/djangoapp/get_dealers/1';ec22ab48-9cc0-403e-9f51-2af619745247]633;C$ curl -i http://127.0.0.1:8000/djangoapp/get_dealers/1
+HTTP/1.1 200 OK
+Date: Fri, 16 Oct 2026 17:16:01 GMT
+Server: WSGIServer/0.2 CPython/3.14.2
+Content-Type: application/json
+X-Frame-Options: DENY
+Content-Length: 136
+X-Content-Type-Options: nosniff
+Referrer-Policy: same-origin
+Cross-Origin-Opener-Policy: same-origin
+
+{"status": 200, "dealer": {"id": 1, "full_name": "Sample Motors", "city": "Detroit", "state": "Michigan", "address": "100 Main Street"}}
