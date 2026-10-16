@@ -1,45 +1,31 @@
 # IBM Cars Dealership Capstone Project
 
-## Project Overview
+**Repository Name:** `ibm-cars-dealership-capstone`
 
-The Cars Dealership Capstone Project is a full-stack web application developed as part of the IBM Full Stack Software Developer program. The application allows users to explore car dealership branches across the United States, view dealership details, register and log in, and submit reviews about dealerships.
+**Project Name:** Cars Dealership – Full Stack Web Application
 
-## Objectives
+## Project Description
 
-- Display dealership locations and details.
-- Filter dealerships by state.
-- Provide user registration and authentication.
-- Allow users to view dealership reviews.
-- Enable logged-in users to submit dealership reviews.
-- Analyze review sentiment using a sentiment analysis service.
-- Build a responsive user interface.
-- Implement REST APIs using Django REST Framework.
-- Use GitHub for version control and GitHub Actions for CI/CD.
-- Prepare the application for cloud deployment.
+A full-stack web application developed as part of the IBM Full Stack Software Developer Capstone Project. It enables users to explore car dealerships, view dealership details, filter dealers by state, register and log in, and submit dealership reviews.
 
 ## Technologies Used
 
-### Frontend
-- React.js
-- HTML5
-- CSS3
-- JavaScript
+- **Frontend:** React.js, HTML, CSS, JavaScript
+- **Backend:** Python, Django, Django REST Framework
+- **Database:** SQLite
+- **Version Control:** Git and GitHub
+- **CI/CD:** GitHub Actions
+- **Deployment:** To be configured
 
-### Backend
-- Python
-- Django
-- Django REST Framework
+## Main Features
 
-### Database
-- SQLite
+- View all car dealerships.
+- Filter dealerships by state.
+- View dealership details and reviews.
+- Register and log in to the application.
+- Submit dealership reviews.
+- Analyze review sentiment.
 
-### Development and Deployment
-- Git and GitHub
-- GitHub Actions
-- Docker
-- Kubernetes
-- IBM Cloud Code Engine
+## Project Status
 
-## Project Structure
-
-```text
+The project is being developed to fulfill the IBM Cars Dealership Full Stack Capstone assignment. Features will be updated as implementation progresses.
