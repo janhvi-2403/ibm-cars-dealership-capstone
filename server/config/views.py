@@ -1,42 +1,28 @@
 import json
+from pathlib import Path
+
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-SAMPLE_DEALERS = [
-    {
-        "id": 1,
-        "full_name": "Sample Motors",
-        "city": "Detroit",
-        "state": "Michigan",
-        "address": "100 Main Street"
-    },
-    {
-        "id": 2,
-        "full_name": "Example Auto Center",
-        "city": "Chicago",
-        "state": "Illinois",
-        "address": "200 Lake Street"
-    }
-]
-SAMPLE_CAR_MAKES = [
-    {
-        "id": 1,
-        "name": "Toyota",
-        "models": ["Camry", "Corolla"]
-    },
-    {
-        "id": 2,
-        "name": "Honda",
-        "models": ["Civic", "Accord"]
-    },
-    {
-        "id": 3,
-        "name": "BMW",
-        "models": ["3 Series", "5 Series"]
-    }
-]
+DATA_DIR = Path(__file__).resolve().parent.parent / "database" / "data"
 
+
+def load_data(filename, key):
+    with (DATA_DIR / filename).open(encoding="utf-8") as file:
+        return json.load(file)[key]
+
+
+def dealers_data():
+    return load_data("dealerships.json", "dealerships")
+
+
+def cars_data():
+    return load_data("car_records.json", "cars")
+
+
+def reviews_data():
+    return load_data("reviews.json", "reviews")
 
 
 @csrf_exempt
@@ -52,19 +38,18 @@ def login_user(request):
     user = authenticate(
         request,
         username=data.get("userName", ""),
-        password=data.get("password", "")
+        password=data.get("password", ""),
     )
 
     if user is None:
         return JsonResponse(
-            {"error": "Invalid username or password"},
-            status=401
+            {"error": "Invalid username or password"}, status=401
         )
 
     login(request, user)
     return JsonResponse({
         "userName": user.username,
-        "status": "Authenticated"
+        "status": "Authenticated",
     })
 
 
@@ -77,53 +62,98 @@ def logout_user(request):
     return JsonResponse({"userName": ""})
 
 
-def get_dealers(request, dealer_id=None):
+def get_dealers(request, dealer_id=None, state=None):
     if request.method != "GET":
         return JsonResponse({"error": "GET required"}, status=405)
 
-    if dealer_id is not None:
-        for dealer in SAMPLE_DEALERS:
-            if dealer["id"] == dealer_id:
-                return JsonResponse({
-                    "status": 200,
-                    "dealer": dealer
-                })
+    dealers = dealers_data()
 
+    if dealer_id is not None:
+        for dealer in dealers:
+            if int(dealer["id"]) == dealer_id:
+                return JsonResponse({"status": 200, "dealer": dealer})
         return JsonResponse({"error": "Dealer not found"}, status=404)
 
-    dealers = SAMPLE_DEALERS
-    state = request.GET.get("state")
+    selected_state = state or request.GET.get("state")
 
-    if state:
+    if selected_state:
+        selected_state = selected_state.strip().lower()
         dealers = [
-            dealer for dealer in SAMPLE_DEALERS
-            if dealer["state"].lower() == state.lower()
+            dealer for dealer in dealers
+            if dealer.get("state", "").lower() == selected_state
+            or dealer.get("st", "").lower() == selected_state
         ]
 
     return JsonResponse({"status": 200, "dealers": dealers})
 
 
+def get_dealer_by_id(request, dealer_id):
+    return get_dealers(request, dealer_id=dealer_id)
 
-def get_cars(request):
+
+def get_dealer_reviews(request, dealer_id):
     if request.method != "GET":
         return JsonResponse({"error": "GET required"}, status=405)
 
-    return JsonResponse({
-        "status": 200,
-        "CarMakes": SAMPLE_CAR_MAKES
-    })
-
-def get_cars(request):
-    if request.method != "GET":
-        return JsonResponse({"error": "GET required"}, status=405)
-
-    cars = [
-        {"CarMake": "Toyota", "CarModel": "Camry"},
-        {"CarMake": "Toyota", "CarModel": "Corolla"},
-        {"CarMake": "Honda", "CarModel": "Civic"},
-        {"CarMake": "Honda", "CarModel": "Accord"},
-        {"CarMake": "BMW", "CarModel": "3 Series"},
-        {"CarMake": "BMW", "CarModel": "5 Series"},
+    reviews = [
+        review for review in reviews_data()
+        if int(review.get("dealership", -1)) == dealer_id
     ]
+    return JsonResponse({"status": 200, "reviews": reviews})
 
-    return JsonResponse({"CarModels": cars})
+
+def get_cars(request):
+    if request.method != "GET":
+        return JsonResponse({"error": "GET required"}, status=405)
+
+    cars = cars_data()
+    unique_cars = []
+    seen = set()
+
+    for car in cars:
+        pair = (car.get("make", ""), car.get("model", ""))
+        if pair not in seen:
+            seen.add(pair)
+            unique_cars.append({
+                "CarMake": pair[0],
+                "CarModel": pair[1],
+            })
+
+    return JsonResponse({"CarModels": unique_cars})
+
+
+def analyze_review(request, review_text):
+    if request.method != "GET":
+        return JsonResponse({"error": "GET required"}, status=405)
+
+    words = set(
+        review_text.lower()
+        .replace("!", " ")
+        .replace(".", " ")
+        .replace(",", " ")
+        .split()
+    )
+
+    positive_words = {
+        "fantastic", "excellent", "great", "good", "amazing",
+        "wonderful", "helpful", "friendly", "love", "best",
+        "satisfied", "awesome", "perfect", "happy", "fast",
+        "services", "service",
+    }
+    negative_words = {
+        "bad", "poor", "terrible", "awful", "worst", "hate",
+        "slow", "rude", "broken", "disappointed", "horrible",
+        "unhelpful", "dirty", "expensive",
+    }
+
+    positive_score = len(words & positive_words)
+    negative_score = len(words & negative_words)
+
+    if positive_score > negative_score:
+        sentiment = "positive"
+    elif negative_score > positive_score:
+        sentiment = "negative"
+    else:
+        sentiment = "neutral"
+
+    return JsonResponse({"sentiment": sentiment})
