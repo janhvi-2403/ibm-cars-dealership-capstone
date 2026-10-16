@@ -70,11 +70,11 @@ def login_user(request):
 
 @csrf_exempt
 def logout_user(request):
-    if request.method != "POST":
-        return JsonResponse({"error": "POST required"}, status=405)
+    if request.method not in ("GET", "POST"):
+        return JsonResponse({"error": "GET or POST required"}, status=405)
 
     logout(request)
-    return JsonResponse({"status": "Logged out successfully"})
+    return JsonResponse({"userName": ""})
 
 
 def get_dealers(request, dealer_id=None):
