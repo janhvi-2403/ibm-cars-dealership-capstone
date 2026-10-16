@@ -1,0 +1,191 @@
+Django checks	Set up job	﻿2026-10-16T18:14:07.2940777Z Current runner version: '2.337.0'
+Django checks	Set up job	2026-10-16T18:14:07.2961320Z ##[group]Runner Image Provisioner
+Django checks	Set up job	2026-10-16T18:14:07.2962174Z Hosted Compute Agent
+Django checks	Set up job	2026-10-16T18:14:07.2962802Z Version: 20261012.601
+Django checks	Set up job	2026-10-16T18:14:07.2963625Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+Django checks	Set up job	2026-10-16T18:14:07.2964341Z Build Date: 2026-10-12T17:48:21Z
+Django checks	Set up job	2026-10-16T18:14:07.2965034Z Worker ID: {66233e96-b9af-499b-8612-3125b64d4549}
+Django checks	Set up job	2026-10-16T18:14:07.2965710Z Region: westus3
+Django checks	Set up job	2026-10-16T18:14:07.2966229Z Cloud: Azure
+Django checks	Set up job	2026-10-16T18:14:07.2966855Z ##[endgroup]
+Django checks	Set up job	2026-10-16T18:14:07.2968364Z ##[group]Operating System
+Django checks	Set up job	2026-10-16T18:14:07.2969001Z Ubuntu
+Django checks	Set up job	2026-10-16T18:14:07.2969499Z 24.04.5
+Django checks	Set up job	2026-10-16T18:14:07.2969967Z LTS
+Django checks	Set up job	2026-10-16T18:14:07.2970531Z ##[endgroup]
+Django checks	Set up job	2026-10-16T18:14:07.2971051Z ##[group]Runner Image
+Django checks	Set up job	2026-10-16T18:14:07.2971632Z Image: ubuntu-24.04
+Django checks	Set up job	2026-10-16T18:14:07.2972173Z Version: 20261012.334.1
+Django checks	Set up job	2026-10-16T18:14:07.2973345Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+Django checks	Set up job	2026-10-16T18:14:07.2975035Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+Django checks	Set up job	2026-10-16T18:14:07.2975927Z ##[endgroup]
+Django checks	Set up job	2026-10-16T18:14:07.2977053Z ##[group]GITHUB_TOKEN Permissions
+Django checks	Set up job	2026-10-16T18:14:07.2979108Z Contents: read
+Django checks	Set up job	2026-10-16T18:14:07.2979717Z Metadata: read
+Django checks	Set up job	2026-10-16T18:14:07.2980228Z Packages: read
+Django checks	Set up job	2026-10-16T18:14:07.2980789Z ##[endgroup]
+Django checks	Set up job	2026-10-16T18:14:07.2982569Z Secret source: Actions
+Django checks	Set up job	2026-10-16T18:14:07.2983699Z Cache mode: write
+Django checks	Set up job	2026-10-16T18:14:07.2984389Z Prepare workflow directory
+Django checks	Set up job	2026-10-16T18:14:07.3267343Z Prepare all required actions
+Django checks	Set up job	2026-10-16T18:14:07.3311535Z Getting action download info
+Django checks	Set up job	2026-10-16T18:14:07.7212840Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+Django checks	Set up job	2026-10-16T18:14:07.8300559Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+Django checks	Set up job	2026-10-16T18:14:08.0263458Z Complete job name: Django checks
+Django checks	Checkout repository	﻿2026-10-16T18:14:08.0888985Z ##[group]Run actions/checkout@v4
+Django checks	Checkout repository	2026-10-16T18:14:08.0889929Z with:
+Django checks	Checkout repository	2026-10-16T18:14:08.0890503Z   repository: janhvi-2403/ibm-cars-dealership-capstone
+Django checks	Checkout repository	2026-10-16T18:14:08.0894601Z   token: ***
+Django checks	Checkout repository	2026-10-16T18:14:08.0895353Z   ssh-strict: true
+Django checks	Checkout repository	2026-10-16T18:14:08.0895849Z   ssh-user: git
+Django checks	Checkout repository	2026-10-16T18:14:08.0896392Z   persist-credentials: true
+Django checks	Checkout repository	2026-10-16T18:14:08.0896963Z   clean: true
+Django checks	Checkout repository	2026-10-16T18:14:08.0897508Z   sparse-checkout-cone-mode: true
+Django checks	Checkout repository	2026-10-16T18:14:08.0898083Z   fetch-depth: 1
+Django checks	Checkout repository	2026-10-16T18:14:08.0898558Z   fetch-tags: false
+Django checks	Checkout repository	2026-10-16T18:14:08.0899065Z   show-progress: true
+Django checks	Checkout repository	2026-10-16T18:14:08.0899548Z   lfs: false
+Django checks	Checkout repository	2026-10-16T18:14:08.0900009Z   submodules: false
+Django checks	Checkout repository	2026-10-16T18:14:08.0900532Z   set-safe-directory: true
+Django checks	Checkout repository	2026-10-16T18:14:08.0901075Z   allow-unsafe-pr-checkout: false
+Django checks	Checkout repository	2026-10-16T18:14:08.0901888Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.1816260Z Syncing repository: janhvi-2403/ibm-cars-dealership-capstone
+Django checks	Checkout repository	2026-10-16T18:14:08.1818362Z ##[group]Getting Git version info
+Django checks	Checkout repository	2026-10-16T18:14:08.1819486Z Working directory is '/home/runner/work/ibm-cars-dealership-capstone/ibm-cars-dealership-capstone'
+Django checks	Checkout repository	2026-10-16T18:14:08.1820908Z [command]/usr/bin/git version
+Django checks	Checkout repository	2026-10-16T18:14:08.1885259Z git version 2.55.0
+Django checks	Checkout repository	2026-10-16T18:14:08.1906110Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.1917173Z Temporarily overriding HOME='/home/runner/work/_temp/41ada4fa-54c2-4713-a990-5c0d94eb36c0' before making global git config changes
+Django checks	Checkout repository	2026-10-16T18:14:08.1919004Z Adding repository directory to the temporary git global config as a safe directory
+Django checks	Checkout repository	2026-10-16T18:14:08.1922441Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ibm-cars-dealership-capstone/ibm-cars-dealership-capstone
+Django checks	Checkout repository	2026-10-16T18:14:08.1973971Z Deleting the contents of '/home/runner/work/ibm-cars-dealership-capstone/ibm-cars-dealership-capstone'
+Django checks	Checkout repository	2026-10-16T18:14:08.1979044Z ##[group]Initializing the repository
+Django checks	Checkout repository	2026-10-16T18:14:08.1984982Z [command]/usr/bin/git init /home/runner/work/ibm-cars-dealership-capstone/ibm-cars-dealership-capstone
+Django checks	Checkout repository	2026-10-16T18:14:08.2069580Z hint: Using 'master' as the name for the initial branch. This default branch name
+Django checks	Checkout repository	2026-10-16T18:14:08.2071537Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+Django checks	Checkout repository	2026-10-16T18:14:08.2073018Z hint: to use in all of your new repositories, which will suppress this warning,
+Django checks	Checkout repository	2026-10-16T18:14:08.2074401Z hint: call:
+Django checks	Checkout repository	2026-10-16T18:14:08.2075070Z hint:
+Django checks	Checkout repository	2026-10-16T18:14:08.2075861Z hint: 	git config --global init.defaultBranch <name>
+Django checks	Checkout repository	2026-10-16T18:14:08.2076923Z hint:
+Django checks	Checkout repository	2026-10-16T18:14:08.2077798Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+Django checks	Checkout repository	2026-10-16T18:14:08.2079221Z hint: 'development'. The just-created branch can be renamed via this command:
+Django checks	Checkout repository	2026-10-16T18:14:08.2080330Z hint:
+Django checks	Checkout repository	2026-10-16T18:14:08.2080970Z hint: 	git branch -m <name>
+Django checks	Checkout repository	2026-10-16T18:14:08.2081836Z hint:
+Django checks	Checkout repository	2026-10-16T18:14:08.2082770Z hint: Disable this message with "git config set advice.defaultBranchName false"
+Django checks	Checkout repository	2026-10-16T18:14:08.2084879Z Initialized empty Git repository in /home/runner/work/ibm-cars-dealership-capstone/ibm-cars-dealership-capstone/.git/
+Django checks	Checkout repository	2026-10-16T18:14:08.2087977Z [command]/usr/bin/git remote add origin https://github.com/janhvi-2403/ibm-cars-dealership-capstone
+Django checks	Checkout repository	2026-10-16T18:14:08.2122704Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.2124217Z ##[group]Disabling automatic garbage collection
+Django checks	Checkout repository	2026-10-16T18:14:08.2125882Z [command]/usr/bin/git config --local gc.auto 0
+Django checks	Checkout repository	2026-10-16T18:14:08.2151761Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.2153055Z ##[group]Setting up auth
+Django checks	Checkout repository	2026-10-16T18:14:08.2157956Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Django checks	Checkout repository	2026-10-16T18:14:08.2183791Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Django checks	Checkout repository	2026-10-16T18:14:08.2491840Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Django checks	Checkout repository	2026-10-16T18:14:08.2518303Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Django checks	Checkout repository	2026-10-16T18:14:08.2744569Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Django checks	Checkout repository	2026-10-16T18:14:08.2768636Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Django checks	Checkout repository	2026-10-16T18:14:08.2933850Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+Django checks	Checkout repository	2026-10-16T18:14:08.2963348Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.2964657Z ##[group]Fetching the repository
+Django checks	Checkout repository	2026-10-16T18:14:08.2971823Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +bb67d382d168ff32d23445bc6369c06efa7f8930:refs/remotes/origin/main
+Django checks	Checkout repository	2026-10-16T18:14:08.7987725Z From https://github.com/janhvi-2403/ibm-cars-dealership-capstone
+Django checks	Checkout repository	2026-10-16T18:14:08.7989099Z  * [new ref]         bb67d382d168ff32d23445bc6369c06efa7f8930 -> origin/main
+Django checks	Checkout repository	2026-10-16T18:14:08.7992000Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.7993048Z ##[group]Determining the checkout info
+Django checks	Checkout repository	2026-10-16T18:14:08.7994735Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.8000241Z [command]/usr/bin/git sparse-checkout disable
+Django checks	Checkout repository	2026-10-16T18:14:08.8054455Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+Django checks	Checkout repository	2026-10-16T18:14:08.8079743Z ##[group]Checking out the ref
+Django checks	Checkout repository	2026-10-16T18:14:08.8083266Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+Django checks	Checkout repository	2026-10-16T18:14:08.8137761Z Switched to a new branch 'main'
+Django checks	Checkout repository	2026-10-16T18:14:08.8141914Z branch 'main' set up to track 'origin/main'.
+Django checks	Checkout repository	2026-10-16T18:14:08.8145620Z ##[endgroup]
+Django checks	Checkout repository	2026-10-16T18:14:08.8178265Z [command]/usr/bin/git log -1 --format=%H
+Django checks	Checkout repository	2026-10-16T18:14:08.8197894Z bb67d382d168ff32d23445bc6369c06efa7f8930
+Django checks	Set up Python	﻿2026-10-16T18:14:08.8456770Z ##[group]Run actions/setup-python@v5
+Django checks	Set up Python	2026-10-16T18:14:08.8457402Z with:
+Django checks	Set up Python	2026-10-16T18:14:08.8458045Z   python-version: 3.12
+Django checks	Set up Python	2026-10-16T18:14:08.8458594Z   check-latest: false
+Django checks	Set up Python	2026-10-16T18:14:08.8462006Z   token: ***
+Django checks	Set up Python	2026-10-16T18:14:08.8462557Z   update-environment: true
+Django checks	Set up Python	2026-10-16T18:14:08.8463289Z   allow-prereleases: false
+Django checks	Set up Python	2026-10-16T18:14:08.8463840Z   freethreaded: false
+Django checks	Set up Python	2026-10-16T18:14:08.8464351Z ##[endgroup]
+Django checks	Set up Python	2026-10-16T18:14:08.9724484Z ##[group]Installed versions
+Django checks	Set up Python	2026-10-16T18:14:08.9814396Z (node:2081) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Django checks	Set up Python	2026-10-16T18:14:08.9815939Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Django checks	Set up Python	2026-10-16T18:14:08.9816877Z Successfully set up CPython (3.12.15)
+Django checks	Set up Python	2026-10-16T18:14:08.9818053Z ##[endgroup]
+Django checks	Install dependencies	﻿2026-10-16T18:14:08.9947985Z ##[group]Run python -m pip install --upgrade pip
+Django checks	Install dependencies	2026-10-16T18:14:08.9949157Z ^[[36;1mpython -m pip install --upgrade pip^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9950176Z ^[[36;1mif [ -f server/requirements.txt ]; then^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9951062Z ^[[36;1m  pip install -r server/requirements.txt^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9951951Z ^[[36;1melif [ -f requirements.txt ]; then^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9952892Z ^[[36;1m  pip install -r requirements.txt^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9953929Z ^[[36;1melse^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9954643Z ^[[36;1m  pip install Django^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:08.9955337Z ^[[36;1mfi^[[0m
+Django checks	Install dependencies	2026-10-16T18:14:09.0181498Z shell: /usr/bin/bash -e {0}
+Django checks	Install dependencies	2026-10-16T18:14:09.0182112Z env:
+Django checks	Install dependencies	2026-10-16T18:14:09.0182832Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Install dependencies	2026-10-16T18:14:09.0183924Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+Django checks	Install dependencies	2026-10-16T18:14:09.0184769Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Install dependencies	2026-10-16T18:14:09.0185633Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Install dependencies	2026-10-16T18:14:09.0186509Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Install dependencies	2026-10-16T18:14:09.0187374Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Django checks	Install dependencies	2026-10-16T18:14:09.0188057Z ##[endgroup]
+Django checks	Install dependencies	2026-10-16T18:14:09.6179779Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages (26.2.1)
+Django checks	Install dependencies	2026-10-16T18:14:10.1861924Z Collecting asgiref==3.12.1 (from -r server/requirements.txt (line 1))
+Django checks	Install dependencies	2026-10-16T18:14:10.2591690Z   Downloading asgiref-3.12.1-py3-none-any.whl.metadata (9.4 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.3280413Z Collecting Django==4.2.30 (from -r server/requirements.txt (line 2))
+Django checks	Install dependencies	2026-10-16T18:14:10.3394916Z   Downloading django-4.2.30-py3-none-any.whl.metadata (4.2 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.3602009Z Collecting django-cors-headers==4.9.0 (from -r server/requirements.txt (line 3))
+Django checks	Install dependencies	2026-10-16T18:14:10.3704963Z   Downloading django_cors_headers-4.9.0-py3-none-any.whl.metadata (16 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.3981257Z Collecting djangorestframework==3.17.2 (from -r server/requirements.txt (line 4))
+Django checks	Install dependencies	2026-10-16T18:14:10.4084105Z   Downloading djangorestframework-3.17.2-py3-none-any.whl.metadata (7.9 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.4261427Z Collecting sqlparse==0.6.0 (from -r server/requirements.txt (line 5))
+Django checks	Install dependencies	2026-10-16T18:14:10.4370601Z   Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.4546718Z Downloading asgiref-3.12.1-py3-none-any.whl (25 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.4699994Z Downloading django-4.2.30-py3-none-any.whl (8.0 MB)
+Django checks	Install dependencies	2026-10-16T18:14:10.6262622Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 59.6 MB/s  0:00:00
+Django checks	Install dependencies	2026-10-16T18:14:10.6364504Z Downloading django_cors_headers-4.9.0-py3-none-any.whl (12 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.6490146Z Downloading djangorestframework-3.17.2-py3-none-any.whl (899 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.6585107Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 899.1/899.1 kB 91.4 MB/s  0:00:00
+Django checks	Install dependencies	2026-10-16T18:14:10.6684957Z Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
+Django checks	Install dependencies	2026-10-16T18:14:10.7535787Z Installing collected packages: sqlparse, asgiref, Django, djangorestframework, django-cors-headers
+Django checks	Install dependencies	2026-10-16T18:14:12.2697913Z 
+Django checks	Install dependencies	2026-10-16T18:14:12.2715509Z Successfully installed Django-4.2.30 asgiref-3.12.1 django-cors-headers-4.9.0 djangorestframework-3.17.2 sqlparse-0.6.0
+Django checks	Check Django configuration	﻿2026-10-16T18:14:12.3275535Z ##[group]Run python server/manage.py check
+Django checks	Check Django configuration	2026-10-16T18:14:12.3276016Z ^[[36;1mpython server/manage.py check^[[0m
+Django checks	Check Django configuration	2026-10-16T18:14:12.3316830Z shell: /usr/bin/bash -e {0}
+Django checks	Check Django configuration	2026-10-16T18:14:12.3317384Z env:
+Django checks	Check Django configuration	2026-10-16T18:14:12.3317791Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Check Django configuration	2026-10-16T18:14:12.3318370Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+Django checks	Check Django configuration	2026-10-16T18:14:12.3318945Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Check Django configuration	2026-10-16T18:14:12.3319426Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Check Django configuration	2026-10-16T18:14:12.3319974Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+Django checks	Check Django configuration	2026-10-16T18:14:12.3320460Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+Django checks	Check Django configuration	2026-10-16T18:14:12.3320901Z ##[endgroup]
+Django checks	Check Django configuration	2026-10-16T18:14:12.7645992Z System check identified no issues (0 silenced).
+Django checks	Post Set up Python	﻿2026-10-16T18:14:12.8169033Z Post job cleanup.
+Django checks	Post Set up Python	2026-10-16T18:14:12.9245881Z (node:2141) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+Django checks	Post Set up Python	2026-10-16T18:14:12.9247093Z (Use `node --trace-deprecation ...` to show where the warning was created)
+Django checks	Post Checkout repository	﻿2026-10-16T18:14:12.9463777Z Post job cleanup.
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0254177Z [command]/usr/bin/git version
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0288003Z git version 2.55.0
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0322415Z Temporarily overriding HOME='/home/runner/work/_temp/9e45e635-d9e7-437c-a788-1d3abb71a519' before making global git config changes
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0324172Z Adding repository directory to the temporary git global config as a safe directory
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0326701Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ibm-cars-dealership-capstone/ibm-cars-dealership-capstone
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0362003Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0395302Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0594533Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0611187Z http.https://github.com/.extraheader
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0621329Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0663459Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0849723Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+Django checks	Post Checkout repository	2026-10-16T18:14:13.0881689Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+Django checks	Complete job	﻿2026-10-16T18:14:13.1216427Z Cleaning up orphan processes
+Django checks	Complete job	2026-10-16T18:14:13.1473447Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
